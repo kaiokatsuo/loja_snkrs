@@ -1,0 +1,287 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Poppins",
+    sans-serif;
+  background-color: #fafafa;
+  color: #222;
+}
+
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #ffffffdd;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #eee;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #111;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.nav-links a.active {
+  color: #8b5cf6;
+  font-weight: 500;
+}
+
+.main-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 90px 16px 40px;
+  flex: 1;
+}
+
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.filtros select {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+  transition: 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.image-container {
+  background: #f4f4f4;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+}
+
+.product-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.product-info h3 {
+  margin-top: 14px;
+  font-size: 1rem;
+}
+
+.product-info p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #555;
+  min-height: 48px;
+}
+
+.product-fabricante {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.product-info strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #111;
+}
+
+
+.product-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (min-width: 900px) {
+  .product-page {
+    flex-direction: row;
+  }
+}
+
+.product-page-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-page-img {
+  max-width: 100%;
+  max-height: 380px;
+  object-fit: contain;
+}
+
+.product-page-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product-page-preco {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 4px 0 10px;
+}
+
+.product-page-fabricante {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.product-page h3 {
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+.product-page p {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.cep-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.cep-row input {
+  flex: 1;
+  min-width: 180px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.cep-row button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  background: #8b5cf6;
+  color: #fff;
+  cursor: pointer;
+}
+
+.cep-row button:hover {
+  background: #7c3aed;
+}
+
+.erro-cep {
+  color: #d32f2f;
+  font-size: 0.85rem;
+}
+
+.cidade-resultado {
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.btn-voltar {
+  margin-top: 12px;
+  display: inline-block;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #8b5cf6;
+}
+
+
+.footer {
+  border-top: 1px solid #eee;
+  background: #fff;
+  padding: 12px 16px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.footer-small {
+  font-size: 0.78rem;
+  color: #999;
+}
